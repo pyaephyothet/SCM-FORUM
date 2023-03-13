@@ -18,22 +18,29 @@
 }
 
 @layer components {
+  /**
+     * index.php
+     */
+
   .header-bar {
-    @apply bg-gradient fixed top-0 left-0 z-20 flex w-full items-center justify-between px-8 py-3 shadow-md shadow-scm-g2 sp:h-[56px] sp:px-5 sp:py-0 md:px-5 md2:px-5;
+    @apply bg-gradient fixed top-0 left-0 z-20 flex h-[56px] w-full items-center justify-between px-8 py-3 shadow-md shadow-scm-g2 sp:px-5 sp:py-0 md:px-5 md2:px-5;
   }
   .logo {
-    @apply flex w-30 place-content-end items-center sp:ml-2 sp:w-max md:min-w-max md:place-content-start;
+    @apply flex w-30 place-content-end  items-center h-fill-available sp:ml-2 sp:w-max md:min-w-max md:place-content-start;
   }
 
   .search-area {
     @apply flex w-70 place-content-start items-center gap-5 pl-5 sp:place-content-end sp:h-fill-available md:w-75 md:place-content-end md2:p-0;
+  }
+  .profile {
+    @apply btn-gradient rounded-2xl bg-white px-4 py-1 text-sm text-white hover:bg-purple-700 active:bg-purple-700 sp:text-xs md:text-xs;
   }
   .gnav {
     @apply absolute inset-0 left-[-500px] z-10 mt-[56px] h-screen w-40 transform border-r-2 border-scm-g5 bg-white text-sm shadow-md duration-200 pc:hidden pc:transform-none;
   }
 
   .menu {
-    @apply bg-gradient hover:hover-gradient active:bg-focus focus:bg-focus block w-full bg-white py-3 pl-5  font-bold shadow-md shadow-scm-g1 md:pl-8  md2:pl-14 font-mono;
+    @apply bg-gradient hover:hover-gradient active:bg-focus focus:bg-focus block w-full bg-white py-3 pl-5  font-mono font-bold shadow-md shadow-scm-g1  md:pl-8 md2:pl-14;
   }
 
   .sub-menu {
@@ -43,13 +50,21 @@
   .side-bar {
     @apply h-screen text-sm  sp:hidden  mdx:col-span-2;
   }
+  .search-form.is-active {
+    @apply block;
+  }
+
+  /**
+     * tag.php
+     */
+
 
   .tag {
     @apply col-span-4 my-10 pl-5 sp:col-span-6 sp:pr-5 mdx:col-span-7 mdx:pr-5;
   }
 
   .tag-link {
-    @apply w-2/6 border border-r-slate-500 bg-white text-center hover:bg-scm-g4 hover:text-white;
+    @apply w-2/6 border border-r-scm-g1 bg-white text-center hover:bg-scm-g4 hover:text-white;
   }
 
   .tag-card {
@@ -61,11 +76,7 @@
   }
 
   .language {
-    @apply mb-2 inline-block rounded-md bg-scm-y3 p-1 text-xs font-bold text-scm-g7;
-  }
-
-  .search-form.is-active {
-    @apply block;
+    @apply mb-2 inline-block rounded-md bg-purple-300 p-1 text-xs font-bold text-scm-g1;
   }
 }
 
@@ -80,18 +91,24 @@
 
   .bg-gradient {
     background-color: #fff;
-    background-image: linear-gradient(90deg, #b5e6b9,#00C292, #66e093, #00C292);
+    background-image: linear-gradient(
+      90deg,
+      #b5e6b9,
+      #00c292,
+      #66e093,
+      #00c292
+    );
     background-size: 300% 100%;
     animation: animateBg 6s infinite linear;
   }
 
   .hover-gradient {
-    background: linear-gradient(93.07deg, #00C292 25.06%, #7DD484 99.99%);
+    background: linear-gradient(93.07deg, #00c292 25.06%, #7dd484 99.99%);
     color: #fff;
   }
 
   .btn-gradient {
-    background: linear-gradient(20deg, #FF7C6D 30%, #FFC578 70%);
+    background: linear-gradient(20deg, #573391 19.7%, #753188 88.3%);
   }
 
   .btn-gradient:hover {
@@ -99,7 +116,7 @@
   }
 
   .bg-focus {
-    background: #00ADAA;
+    background: #00adaa;
     color: #fff;
   }
 }

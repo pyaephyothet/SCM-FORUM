@@ -24,7 +24,7 @@
 }
 </style>
 
-<body class="antialiased font-Dubai-Regular">
+<body class="antialiased font-dubai">
   <header class="header-bar">
     <input type="checkbox" name="check" id="check" hidden>
     <label for="check" class="hamburger float-left text-white text-2xl mr-2 pc:hidden mdx:hidden"><i class="bi bi-list"></i><i class="bi bi-x-lg hidden"></i></label>
@@ -45,10 +45,10 @@
     </nav>
 
     <h1 class="logo">
-      <a href="#" class="flex items-center px-3 hover:hover-gradient sp:p-0">
+      <a href="#" class="flex items-center px-3 h-fill-available hover:hover-gradient sp:p-0">
         <img src="../dist/img/scm-forum.png" alt="SCM FORUM" class="block w-8 h-8 sp:w-12">
         <span class="font-extrabold font-mono mx-3 md:mr-5 sp:mx-2 text-white text-xl md:text-sm mt-1 sp:hidden">SCM FORUM</span>
-        <a href="#" class="px-4 py-1 bg-transparant hover:bg-scm-y2 active:bg-scm-y2 hover:text-white active:text-white hover:rounded-2xl md:text-xs sp:text-xs sp:ml-2 md2:mr-4 sp:mt-1 text-sm">Product</a>
+        <a href="#" class="px-4 py-1 bg-transparant hover:bg-purple-500 active:bg-purple-500 hover:text-white active:text-white hover:rounded-2xl md:text-xs sp:text-xs sp:ml-2 md2:mr-4 sp:mt-1 text-sm">Product</a>
       </a>
     </h1>
 
@@ -68,7 +68,7 @@
         <a href="#" class="btn-close hidden"><i class="bi bi-x-lg text-white font-bold"></i></a>
       </div>
 
-      <a href="#" class="px-4 py-1 bg-white btn-gradient hover:bg-scm-y2 active:bg-scm-y2 text-white rounded-2xl md:text-xs sp:text-xs text-sm">Profile</a>
+      <a href="#" class="profile">Profile</a>
       <a href="#"><i class="bi bi-inbox-fill hover:text-white hover:text-2xl"></i></a>
       <a href="#"><i class="bi bi-archive-fill hover:text-white hover:text-2xl"></i></a>
     </div>
