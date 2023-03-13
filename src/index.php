@@ -59,9 +59,9 @@
         <button type="submit" class="absolute md:left-3 md2:left-2 pc:left-3 top-1/2 translate-y-[-50%]"><i class="bi bi-search text-scm-g1"></i></button>
       </div>
 
-      <div class="sp-search pc:hidden mdx-hidden">
+      <div class="sp-search pc:hidden mdx-hidden sp:p-5">
         <a href="#" class="search-btn"><i class=" bi bi-search text-white font-bold"></i></a>
-        <form class="search-form absolute p-5 left-0 right-0 w-full top-[56px] bg-scm-g7 hidden" action="" method="">
+        <form class="search-form absolute p-5 left-0 right-0 w-full top-[56px] bg-scm-g2 hidden" action="" method="">
           <input type="text" placeholder="search" value="" name="s" class="w-full px-10 py-1  focus:outline-0 border-0 focus:shadow-lg">
           <button type="submit" class="absolute left-8 top-1/2 translate-y-[-50%]"><i class="bi bi-search text-scm-g1"></i></button>
         </form>
