@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dubai-Regular";
+  src: url("/dist/font/Dubai-Regular.ttf");
+}
+
+@layer base {
+  a {
+    @apply block;
+  }
+
+  ::placeholder {
+    @apply text-xs;
+  }
+}
+
+@layer components {
+  .header-bar {
+    @apply bg-gradient fixed top-0 left-0 z-20 flex w-full items-center justify-between px-8 py-3 shadow-md shadow-scm-g2 sp:h-[56px] sp:px-5 sp:py-0 md:px-5 md2:px-5;
+  }
+  .logo {
+    @apply flex w-30 place-content-end items-center sp:ml-2 sp:w-max md:min-w-max md:place-content-start;
+  }
+
+  .search-area {
+    @apply flex w-70 place-content-start items-center gap-5 pl-5 sp:place-content-end sp:h-fill-available md:w-75 md:place-content-end md2:p-0;
+  }
+  .gnav {
+    @apply absolute inset-0 left-[-500px] z-10 mt-[56px] h-screen w-40 transform border-r-2 border-scm-g5 bg-white text-sm shadow-md duration-200 pc:hidden pc:transform-none;
+  }
+
+  .menu {
+    @apply bg-gradient hover:hover-gradient active:bg-focus focus:bg-focus block w-full bg-white py-3 pl-5  font-bold shadow-md shadow-scm-g1 md:pl-8  md2:pl-14 font-mono;
+  }
+
+  .sub-menu {
+    @apply menu-pd md:pl-14 md2:pl-24;
+  }
+
+  .side-bar {
+    @apply h-screen text-sm  sp:hidden  mdx:col-span-2;
+  }
+
+  .tag {
+    @apply col-span-4 my-10 pl-5 sp:col-span-6 sp:pr-5 mdx:col-span-7 mdx:pr-5;
+  }
+
+  .tag-link {
+    @apply w-2/6 border border-r-slate-500 bg-white text-center hover:bg-scm-g4 hover:text-white;
+  }
+
+  .tag-card {
+    @apply grid gap-3 sp:grid-cols-1 md:grid-cols-2 md2:grid-cols-3 pc:grid-cols-4;
+  }
+
+  .card {
+    @apply hover:hover-gradient rounded-md border border-scm-g1 p-3;
+  }
+
+  .language {
+    @apply mb-2 inline-block rounded-md bg-scm-y3 p-1 text-xs font-bold text-scm-g7;
+  }
+
+  .search-form.is-active {
+    @apply block;
+  }
+}
+
+@layer utilities {
+  .menu-pd {
+    padding-left: 3rem !important;
+  }
+
+  .border-r-none {
+    border-right: none !important;
+  }
+
+  .bg-gradient {
+    background-color: #fff;
+    background-image: linear-gradient(90deg, #b5e6b9,#00C292, #66e093, #00C292);
+    background-size: 300% 100%;
+    animation: animateBg 6s infinite linear;
+  }
+
+  .hover-gradient {
+    background: linear-gradient(93.07deg, #00C292 25.06%, #7DD484 99.99%);
+    color: #fff;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(20deg, #FF7C6D 30%, #FFC578 70%);
+  }
+
+  .btn-gradient:hover {
+    background: #496cf6;
+  }
+
+  .bg-focus {
+    background: #00ADAA;
+    color: #fff;
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
